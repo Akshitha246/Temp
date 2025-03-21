@@ -5,64 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      .row {
-        height: 300px;
-        background-color: silver;
+      .container {
         display: flex;
-        /* justify-content: center; */
+        padding:100px;
         justify-content: center;
-        /* align-items: center; */
         align-items: center;
+        background-color: #eeeeee;
+      }
+      .box {
+        background-color: white;
+        padding: 100px;
+        width:300px;
+        border-radius:50px;
+        text-align:center;
+      }
+      input {
+        padding: 10px;
+        width:100%;
+        border:1px silver solid;
       }
 
-      .box {
-        /* background-color: orange; */
-        background: linear-gradient(green, yellow);
-        padding: 10px;
-        margin: 10px;
-        border: 2px solid red;
+      .btn-login {
+        background-color: blue;
+        color: white;
+        font-size: 30px;
+        width: 100%;
+        padding:10px;
         border-radius: 10px;
-        box-shadow: 2px 2px 2px 2px blue;
-        transition-property: transform;
-        transition-duration: 0.5s;
       }
-      .box:hover {
-        transform: scale(1.2, 1.2);
+      .left-box {
+        font-size:30px;
+        padding:50px
       }
+   
+      .left-box p {
+        margin-left:40px;
+      }
+      
     </style>
   </head>
   <body>
     <h1>Temp 7</h1>
-    <hr />
     <div class="container">
-        <div>
-            <h1>My Application</h1>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </div>
-
-    <div class="row">
-      <div class="box">
-        <h2>Project 1</h2>
-        <p>This is the description</p>
-        <a href="#">View Project</a>
+      <div class="left-box">
+        <img src="assets/images/facebook.svg" width="400px" />
+        <p>
+          Facebook helps you connect and share<br> with the people in your life.
+        </p>
       </div>
       <div class="box">
-        <h2>Project 2</h2>
-        <p>This is the description</p>
-        <a href="#">View Project</a>
-      </div>
-      <div class="box">
-        <h2>Project 3</h2>
-        <p>This is the description</p>
-        <a href="#">View Project</a>
+        <form>
+          <p><input type="text" placeholder="Enter Email Address" /></p>
+          <p><input type="password" placeholder="Enter Password" /></p>
+          <p><button class="btn-login">Log in</button></p>
+        </form>
       </div>
     </div>
-</div>
   </body>
 </html>

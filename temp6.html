@@ -5,76 +5,161 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      h2 {
-        background-color: green;
+      * {
+        margin: 0px;
       }
       .c {
-        background-color: blue;
-      }
-      .c1 {
-        color: red;
-      }
-      #greet {
-        background-color: pink;
-      }
-      #greet1 {
-        background-color: yellow;
-      }
-      .parent {
-        color: red;
-      }
-      .parent div {
-        background-color: pink;
-      }
-      .parent p {
         background-color: orange;
       }
-      div {
-        background-color: magenta;
+      h3 {
+        background-color: orange;
       }
-      a:hover {
+      #h {
+        position: sticky;
+        top: 0px;
+        background-color: orange;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .row {
+        background-color: silver;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
+      .box {
+        /* background-color: teal; */
+        margin: 20px;
+        padding: 20px;
+        width: 300px;
+        border: 5px solid orange;
+        border-radius: 20px;
+        background: linear-gradient(maroon, silver);
+        box-shadow: 5px 5px 5px 5px grey;
+        transition-property: transform;
+        transition-duration: 0.5s;
+      }
+      .box:hover {
+        transform: scale(1.5, 1.5);
+      }
+
+      .container {
+        position: absolute;
+        scroll-behavior: smooth;
+        overflow: auto;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        height: 100%;
+      }
+      p {
+        font-size: 12px;
+        font-family: "verdana";
+        font-weight: bold;
+      }
+      .header {
+        background-image: url("assets/images/officedesk.jpg");
+        background-size: cover;
+        justify-content: center;
+        align-items: end;
+      }
+      .caption {
+        background-color: red;
+        padding: 20px;
+        opacity: 0.4;
+        color: white;
+      }
+
+      #h a {
         text-decoration: none;
       }
-      input[type="text"],input[type="password"] {
-        background-color: pink;
+      /* ul {
+        margin: 0px;
+        padding: 0px;
+      } */
+      li {
+        display: inline-block;
+        padding: 5px;
+        font-size: larger;
       }
-      h5,h6{
-        background-color: yellow;
+      .menu {
+        margin: 0px;
       }
+      .submenu {
+        display: none;
+        position: absolute;
+        background-color: silver;
+      }
+      .menu:hover .submenu {
+        display: block;
+      }
+      .menu:hover {
+        background-color: silver;
+      }
+     
     </style>
   </head>
   <body>
-    <h1>Temp 6</h1>
-    <hr />
-    <h2 class="c c1">Hello World</h2>
-    <h2>Good Morning</h2>
-    <a href="#">Vist Project 1</a>
-    <p class="c">
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo unde ea
-      veritatis harum? Esse, obcaecati nesciunt? Incidunt consectetur doloremque
-      voluptatum architecto quidem quia? Dolorum voluptatum maxime excepturi
-      labore veritatis laborum.
-    </p>
-    <h2 id="greet">Good Evening</h2>
-    <h2>Good Night</h2>
-    <hr />
-    <div class="parent">
-      <div>Orange</div>
-      <div>Mango</div>
-      <p>This is a paragraph</p>
+    <div class="container">
+      <h1 id="temp">Temp 6</h1>
+      <!-- <h3 style="background-color: orange">My Application</h3> -->
+      <!-- <h3 class="c">My Application</h3> -->
+      <!-- <h3>My Application</h3> -->
+
+      <div id="h">
+        <h3>My Application</h3>
+        <div>
+          <!-- <a href="#home">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a> -->
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li class="menu">
+              <a href="#projects">Projects</a>
+              <div class="submenu">
+                <a href="#">Project 1</a><br />
+                <a href="#">Project 2</a><br />
+              </div>
+            </li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row header" id="home">
+        <div class="caption">
+          <h1>Full Stack Developer</h1>
+          <p>MERN | MERN | Java | Python</p>
+        </div>
+      </div>
+      <div class="row" id="projects">
+        <div class="box">
+          <h2>Project 1</h2>
+          <p>This is my project 1</p>
+          <a href="#">View Project</a>
+        </div>
+        <div class="box">
+          <h2>Project 2</h2>
+          <p>This is my project 2</p>
+          <a href="#">View Project</a>
+        </div>
+        <div class="box">
+          <h2>Project 3</h2>
+          <p>This is my project 3</p>
+          <a href="#">View Project</a>
+        </div>
+      </div>
+      <div>
+        <h3>@Copyright 2024. All rights reserved.</h3>
+      </div>
     </div>
-    <div>
-      <div>Carrot</div>
-      <div>Beetroot</div>
-      <p>This is a paragraph</p>
-    </div>
-    <hr>
-    <p><input type="text"></p>
-    <p><input type="password"></p>
-    <p><input type="checkbox">Remember Me</p>
-    <button>Submit</button>
-    <hr>
-    <h5>Hello this is h5</h5>
-    <h6>Hello this is h5</h6>
   </body>
 </html>
